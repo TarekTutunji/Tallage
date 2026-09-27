@@ -12,8 +12,8 @@ type ActionType string
 
 const (
 	// Taxation phase actions
-	ActionTaxPeasantsLow  ActionType = "tax_peasants_low"  // 5 gold, no risk
-	ActionTaxPeasantsHigh ActionType = "tax_peasants_high" // 10 gold, revolt risk
+	ActionTaxPeasantsLow  ActionType = "tax_peasants_low"  // 1 gold per peasant, no chance of revolt
+	ActionTaxPeasantsHigh ActionType = "tax_peasants_high" // 2 gold per peasant, with a chance of a peasant revolt
 	ActionTaxMerchants    ActionType = "tax_merchants"
 
 	// Spending phase actions

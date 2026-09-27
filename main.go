@@ -477,6 +477,8 @@ func formatActionForMarkdown(action jsonapi.ActionJSON) string {
 		return fmt.Sprintf("Tax %s (%v)", action.MerchantID, action.Amount)
 	case "build_army":
 		return fmt.Sprintf("Build Army (%v)", action.Amount)
+	case "monarch_invest":
+		return fmt.Sprintf("Gift %v to %s", action.Amount, action.MerchantID)
 	case "merchant_invest":
 		return fmt.Sprintf("Invest %v", action.Amount)
 	case "merchant_hide":
@@ -484,6 +486,8 @@ func formatActionForMarkdown(action jsonapi.ActionJSON) string {
 			return "Hide 0"
 		}
 		return fmt.Sprintf("Hide %v", action.Amount)
+	case "merchant_unhide":
+		return fmt.Sprintf("Unhide %v", action.Amount)
 	case "attack":
 		return fmt.Sprintf("Attack %s", action.TargetID)
 	case "no_attack":
